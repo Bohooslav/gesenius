@@ -83,7 +83,7 @@ html {
 	background-color: var(--background-color);
 	color: var(--text-color);
 	font-family: 'David Libre', 'System UI', sans, sans-serif;
-	font-size: 2vw;
+	font-size: 24px;
 	-webkit-animation: text-came 300ms ease alternate;
 	animation: text-came 300ms ease alternate;
 	line-height: 2;
@@ -128,6 +128,11 @@ a:hover {
 .extra_title {
 	text-align: center;
 	margin: 2.4vh 0;
+}
+
+.extra_title a {
+	color: var(--text-color);
+	background-image: linear-gradient( var(--text-color) 0px, var(--text-color) 100%);
 }
 
 #content {
