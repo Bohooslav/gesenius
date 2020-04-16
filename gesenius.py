@@ -22,8 +22,8 @@ for url in localurls.urls:
         #     html[arrows_index:]
         # print(text)
 
-        text = html.replace('<a href="/gesenius"><h2 class="extra_title">Gesenius\' Hebrew Grammar</h2></a>',
-                            '<h2 class="extra_title"><a href="/gesenius">Gesenius\' Hebrew Grammar</a></h2>')
+        text = html.replace('<meta name = "viewport" content = "width=device-width, initial-scale=1.0, minimum-scale=1.0" >',
+                            '<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"><meta name="description" content="Gesenius\' Hebrew Grammar. Read online"><meta property="og:title" content="Gesenius\' Hebrew Grammar. Read online"><meta property="og:description" content="Gesenius\' Hebrew Grammar. Read online"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><link rel="manifest" href="site.webmanifest"><meta property="og:image" content="light.png"><meta name="twitter:image:src" content="light.png"><meta name="theme-color" content="#04060c" />')
 
         ############ FILE PART #############
         # print(url)
