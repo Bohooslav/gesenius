@@ -1,0 +1,220 @@
+:root {
+	--background-color: #04060c;
+	--text-color: #fee;
+	--btn-bg: #88f2;
+	--btn-bg-hover: #88f4;
+	--accent-color: #8080ff;
+	--accent-hover-color: #96b6f3;
+}
+
+* {
+	box-sizing: border-box;
+	scrollbar-color: var(--btn-bg-hover) #00000000;
+	scrollbar-width: auto;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
+	transition: all 500ms ease;
+}
+
+*::selection {
+	text-decoration-color: var(--background-color);
+	color: var(--background-color);
+	background-color: var(--accent-hover-color);
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--btn-bg-hover);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--btn-bg);
+}
+
+:focus {
+	outline: none;
+}
+
+@keyframes text-came {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@font-face {
+	font-family: 'David Libre';
+	src: local('DavidLibre-Medium'), url('DavidLibre-Medium.woff2') format('woff2'), url('DavidLibre-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'David Libre';
+	src: local('DavidLibre-Regular'), url('DavidLibre-Regular.woff2') format('woff2'), url('DavidLibre-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'David Libre';
+	src: local('David Libre Bold'), local('DavidLibre-Bold'), url('DavidLibre-Bold.woff2') format('woff2'), url('DavidLibre-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: 'David Libre', 'System UI', sans, sans-serif;
+	font-size: 2vw;
+	-webkit-animation: text-came 300ms ease alternate;
+	animation: text-came 300ms ease alternate;
+	line-height: 2;
+}
+
+@keyframes link-hover {
+	0% {
+		background-size: 100% 0.2em;
+		background-position: 0px 110%;
+	}
+	50% {
+		background-size: 0% 0.2em;
+		background-position: 0px 110%;
+	}
+	50.01% {
+		background-size: 0% 0.2em;
+		background-position: right 0px top 110%;
+	}
+	100% {
+		background-size: 100% 0.2em;
+		background-position: right 0px top 110%;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--accent-color);
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: 100% 0.2em;
+	background-position: 0px 110%;
+	background-image: linear-gradient( var(--accent-color) 0px, var(--accent-color) 100%);
+}
+
+a:hover {
+	color: var(--accent-hover-color);
+	background-image: linear-gradient( var(--accent-hover-color) 0px, var(--accent-hover-color) 100%);
+	-webkit-animation: 0.4s cubic-bezier(0.58, 0.3, 0.005, 1) 0s 1 normal none running link-hover;
+	animation: 0.4s cubic-bezier(0.58, 0.3, 0.005, 1) 0s 1 normal none running link-hover;
+}
+
+.extra_title {
+	text-align: center;
+	margin: 2.4vh 0;
+}
+
+#content {
+	padding: 4vh 8vw;
+}
+
+#content div p {
+	text-indent: 4vw;
+	margin: 2vh 0;
+}
+
+#content div div p {
+	text-indent: 0;
+}
+
+table {
+	font-size: 0.9em;
+	margin: 8vh 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	overflow-x: auto;
+}
+
+tbody {
+	max-width: 100%;
+}
+
+table tr:first-child th {
+	padding: 4vh 0;
+}
+
+tbody td {
+	padding: 4px;
+}
+
+.subtitle {
+	margin-top: 8vh;
+	font-size: 1.2em;
+}
+
+abbr {
+	cursor: help;
+}
+
+@media screen and (max-width: 960px) {
+	html {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+.arrows {
+	display: flex;
+	justify-content: space-between;
+	direction: ltr;
+	padding: 4vh 8vw;
+	overflow: hidden;
+}
+
+.arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 64px;
+	width: 64px;
+	fill: var(--text-color);
+	cursor: pointer;
+	background-image: none !important;
+}
+
+.arrow:hover {
+	background-color: var(--btn-bg);
+	border-radius: 50%;
+	fill: var(--accent-hover-color);
+	transform: rotate(360deg);
+}
+
+.arrow_next {
+	transform: rotate(-90deg) scale(2);
+}
+
+.arrow_prev {
+	transform: rotate(90deg) scale(2);
+}
