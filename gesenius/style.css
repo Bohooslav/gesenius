@@ -56,25 +56,31 @@
 }
 
 @font-face {
-	font-family: 'David Libre';
-	src: local('DavidLibre-Medium'), url('./DavidLibre-Medium.woff2') format('woff2'), url('./DavidLibre-Medium.woff') format('woff');
-	font-weight: 500;
+    font-family: 'David Libre';
+    src: local('DavidLibre-Regular'),
+        url('DavidLibre-Regular.woff2') format('woff2'),
+        url('DavidLibre-Regular.woff') format('woff');
+    font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'David Libre';
-	src: local('DavidLibre-Regular'), url('./DavidLibre-Regular.woff2') format('woff2'), url('./DavidLibre-Regular.woff') format('woff');
-	font-weight: normal;
+    font-family: 'David Libre';
+    src: local('DavidLibre-Medium'),
+        url('DavidLibre-Medium.woff2') format('woff2'),
+        url('DavidLibre-Medium.woff') format('woff');
+    font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'David Libre';
-	src: local('David Libre Bold'), local('DavidLibre-Bold'), url('./DavidLibre-Bold.woff2') format('woff2'), url('./DavidLibre-Bold.woff') format('woff');
-	font-weight: bold;
+    font-family: 'David Libre';
+    src: local('David Libre Bold'), local('DavidLibre-Bold'),
+        url('DavidLibre-Bold.woff2') format('woff2'),
+        url('DavidLibre-Bold.woff') format('woff');
+    font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
